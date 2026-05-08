@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside My World</title>
+    <style>
+        /* تنسيق عام للموقع */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a; /* لون غامق فخم */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            /* خاصية منع النسخ وتحديد النصوص للأمان */
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid #38bdf8;
+        }
+
+        h1 { margin: 0; font-size: 3em; color: #38bdf8; }
+        .tagline { opacity: 0.8; margin-top: 15px; font-size: 1.2em; }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 { color: #38bdf8; border-right: 4px solid #38bdf8; padding-right: 15px; }
+
+        /* تنسيق الميديا (صور وفيديو) */
+        .media-box {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        img, video {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        /* نظام التعليقات */
+        #disqus_thread {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.6;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inside My World</h1>
+        <p class="tagline">مرحباً بكم في عالمي الخاص.. هنا تجدون أعمالي وإبداعاتي</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2>📸 معرض الأعمال</h2>
+            <p>هذه المساحة مخصصة لعرض الصور والمقاطع الخاصة بي.</p>
+            
+            <div class="media-box">
+                <img src="image1.jpg" alt="صورة عملي">
+            </div>
+
+            <div class="media-box">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💬 ركن التفاعل</h2>
+            <p>يسعدني سماع رأيكم (التعليق متاح للجميع، التعديل متاح لي فقط).</p>
+            
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;
+                    this.page.identifier = window.location.pathname;
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://inside-my-world-1.disqus.com/embed.js'; // كود افتراضي
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Inside My World | جميع الحقوق محفوظة
+    </footer>
+
+</body>
+</html>
