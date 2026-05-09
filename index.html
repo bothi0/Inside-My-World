@@ -1,12 +1,59 @@
-<div style="background-color: #1a1a1a; color: white; padding: 20px; border-radius: 10px; display: inline-block;">
-    <!-- أيقونة الكرة الأرضية والواي فاي -->
-    <img src="https://i.imgur.com/your_image_here.png" alt="Icon" width="40" style="vertical-align: middle;">
-    
-    <span style="margin-left: 10px;">اختر الشبكة</span>
-    
-    <!-- السطر والسهم (القائمة المنسدلة) -->
-    <select style="background: transparent; color: white; border: none; border-bottom: 1px solid white; margin-left: 10px; cursor: pointer;">
-        <option style="color: black;">Wi-Fi (الواي فاي)</option>
-        <option style="color: black;">Localhost</option>
-    </select>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: #d1d1d1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        /* الكرة الأرضية */
+        .globe {
+            width: 150px;
+            height: 150px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Earth_Western_Hemisphere_transparent_background.png/600px-Earth_Western_Hemisphere_transparent_background.png');
+            background-size: cover;
+            margin-bottom: 30px;
+            filter: sepia(0.5) brightness(0.8); /* ليعطي اللون الذهبي في صورتك */
+        }
+        /* صندوق اختيار الشبكة */
+        .selector-container {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 8px;
+            width: 300px;
+            justify-content: space-between;
+        }
+        select {
+            background: transparent;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+            outline: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="globe"></div>
+
+    <div class="selector-container">
+        <select>
+            <option>اختر شبكة...</option>
+            <option>Wi-Fi المنزل</option>
+            <option>شبكة أوس الشخصية</option>
+        </select>
+        <span style="color: #333;">📶</span>
+    </div>
+
+</body>
+</html>
